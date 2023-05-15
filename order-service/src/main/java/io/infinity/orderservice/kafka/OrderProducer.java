@@ -26,7 +26,7 @@ public class OrderProducer {
 
     public void sendMessage(OrderEvent event) {
 
-        LOGGER.info(String.format("Order Event: ", event.toString()));
+        LOGGER.info(String.format("Order Event: %s", event.toString()));
 
         Message<OrderEvent> message = MessageBuilder
                 .withPayload(event)
